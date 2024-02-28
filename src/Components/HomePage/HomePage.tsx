@@ -68,7 +68,7 @@ export const HomePage = () => {
         <ul className="skills-showcase__list">
           {techIcons.map((icon) => {
             return (
-              <li className="skills-showcase__list-item">
+              <li key={icon} className="skills-showcase__list-item">
                 <i className={icon}></i>
               </li>
             );

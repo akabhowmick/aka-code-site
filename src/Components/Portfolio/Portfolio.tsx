@@ -1,4 +1,6 @@
 import "./Portfolio.css";
+import { ProjectBox } from "./ProjectBox";
+import { projectInfo } from "./ProjectInfo";
 export const Portfolio = () => {
   return (
     <section id="projects" className="projects main-section">
@@ -18,116 +20,9 @@ export const Portfolio = () => {
                 <span className="projects__list-item-count-line"> </span>
                 <span className="projects__list-item-count-end-dot"> </span>
               </div>
-              <div className="projects__list-item-details">
-                <div className="projects__list-item-img-cont">
-                  <img
-                    src="./assets/mock.png"
-                    alt="Project Image"
-                    className="projects__list-item-img"
-                  />
-                </div>
-                <h3 className="heading-tertiary projects__list-item-heading-tertiary">
-                  Project Name
-                </h3>
-
-                <p className="text-primary projects__list-item-text-primary">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                    labore magni saepe veritatis voluptatum alias fugit.
-                    Explicabo ducimus
-                  </span>
-                  <span>
-                    sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit
-                  </span>
-                </p>
-                <button className="btn btn-theme projects__btn-theme">
-                  Live Link
-                </button>
-                <button className="btn btn-inv projects__btn-inv">
-                  Code Link
-                </button>
-              </div>
-            </div>
-            <div className="projects__list-item projects__list-item--inv">
-              <div className="projects__list-item-details">
-                <div className="projects__list-item-img-cont">
-                  <img
-                    src="./assets/mock.png"
-                    alt="Project Image"
-                    className="projects__list-item-img"
-                  />
-                </div>
-                <h3 className="heading-tertiary projects__list-item-heading-tertiary">
-                  Project Name
-                </h3>
-
-                <p className="text-primary projects__list-item-text-primary">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                    labore magni saepe veritatis voluptatum alias fugit.
-                    Explicabo ducimus
-                  </span>
-
-                  <span>
-                    sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit
-                  </span>
-                </p>
-                <button className="btn btn-theme projects__btn-theme">
-                  Live Link
-                </button>
-                <button className="btn btn-inv projects__btn-inv">
-                  Code Link
-                </button>
-              </div>
-              <div className="projects__list-item-count">
-                <span className="projects__list-item-count-num"> 2 </span>
-                <span className="projects__list-item-count-line"> </span>
-                <span className="projects__list-item-count-end-dot"> </span>
-              </div>
-            </div>
-            <div className="projects__list-item">
-              <div className="projects__list-item-count">
-                <span className="projects__list-item-count-num"> 3 </span>
-                <span className="projects__list-item-count-line"> </span>
-                <span className="projects__list-item-count-end-dot"> </span>
-              </div>
-            </div>
-            <div className="projects__list-item projects__list-item--inv">
-              <div className="projects__list-item-details">
-                <div className="projects__list-item-img-cont">
-                  <img
-                    src="./assets/mock.png"
-                    alt="Project Image"
-                    className="projects__list-item-img"
-                  />
-                </div>
-                <h3 className="heading-tertiary projects__list-item-heading-tertiary">
-                  Project Name
-                </h3>
-
-                <p className="text-primary projects__list-item-text-primary">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                    labore magni saepe veritatis voluptatum alias fugit.
-                    Explicabo ducimus
-                  </span>
-                  <span>
-                    sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit
-                  </span>
-                </p>
-                <button className="btn btn-theme projects__btn-theme">
-                  Live Link
-                </button>
-                <button className="btn btn-inv projects__btn-inv">
-                  Code Link
-                </button>
-              </div>
+              {projectInfo.map((project) => {
+                return <ProjectBox key={project.name} project={project} />;
+              })}
               <div className="projects__list-item-count">
                 <span className="projects__list-item-count-num"> 4 </span>
                 <span className="projects__list-item-count-line"> </span>

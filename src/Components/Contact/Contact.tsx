@@ -1,3 +1,4 @@
+import "./Contact.css";
 export const Contact = () => {
   return (
     <section id="contact" className="contact main-section">
