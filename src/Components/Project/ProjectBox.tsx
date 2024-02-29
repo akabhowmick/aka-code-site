@@ -1,30 +1,44 @@
 import { Project } from "./ProjectInfo";
+import "../Portfolio/Portfolio.css";
+import "./Project.css";
 
-export const ProjectBox = ({ project }: { project: Project }) => {
-  const { name, description, image, link, githubLink } = project;
+export const ProjectBox = ({
+  project,
+}: {
+  project: Project;
+}) => {
+  const {
+    name,
+    description,
+    image,
+    caseStudyLink,
+  } = project;
   return (
-    <div className="projects__list-item-details">
-      <div className="projects__list-item-img-cont">
+    <div className="projects__row">
+      <div className="projects__row-img-cont">
         <img
           src={image}
-          alt="Project Image"
-          className="projects__list-item-img"
+          alt="Software Screenshot"
+          className="projects__row-img"
+          loading="lazy"
         />
       </div>
-      <h3 className="heading-tertiary projects__list-item-heading-tertiary">
-        {name}
-      </h3>
-      <p className="text-primary projects__list-item-text-primary">
-        {description.map((paragraph, index) => {
-          return <span key={index}>{paragraph}</span>;
-        })}
-      </p>
-      <button className="btn btn-theme projects__btn-theme">
-        Live Link {link}
-      </button>
-      <button className="btn btn-inv projects__btn-inv">
-        Code Link {githubLink}
-      </button>
+      <div className="projects__row-content">
+        <h3 className="projects__row-content-title">
+          {name}
+        </h3>
+        <p className="projects__row-content-desc">
+          Project Description:{" "}
+          {description[0]}
+        </p>
+        <a
+          className="btn btn--med btn--theme dynamicBgClr"
+          href={caseStudyLink}
+          target="_blank"
+        >
+          Case Study
+        </a>
+      </div>
     </div>
   );
 };

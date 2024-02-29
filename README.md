@@ -1,12 +1,13 @@
- <!--//! TODO  -->
- Update readme
- Styling
- Navbar => use the react on click features (padding) 
- Form error
- background 
- react router 
- Project Links:
-  1. tkd
-  2. jet quiz
-  3. 3d site
-  4. queens finest 
+# Akash Bhowmick Personal Website 
+
+## Description
+This website is my personal website. Please enjoy and feel free to contact me with any questions or inquiries!
+
+## Features
+- Contact form to get in touch with me!
+- Case studies on live websites! 
+
+## Technologies Used
+- React
+- React-Bootstrap
+- MUI 

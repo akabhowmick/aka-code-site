@@ -1,18 +1,35 @@
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
-import { Contact } from "./Components/Contact/Contact";
-import { Footer } from "./Components/Footer/Footer";
-import { HomePage } from "./Components/HomePage/HomePage";
-import { Navbar } from "./Components/Navbar/Navbar";
-import { Portfolio } from "./Components/Portfolio/Portfolio";
+import { Home } from "./Components/Home/Home";
+import { ProjectPage } from "./Components/Project/ProjectPage";
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route
+        path="/"
+        element={<Home />}
+      >
+        {/* <Route
+          index
+          element={<Home />}
+        /> */}
+        <Route
+          path="projects/:projectId"
+          element={<ProjectPage />}
+        />
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Route>
+    )
+  );
   return (
     <>
-      <Navbar />
-      <HomePage />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <RouterProvider router={router} />
     </>
   );
 }

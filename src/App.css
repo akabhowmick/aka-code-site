@@ -98,7 +98,7 @@ input:focus,button:focus,a:focus,textarea:focus {
 .main-container {
   max-width: 120rem;
   margin: auto;
-  width: 90%;
+  width: 92%;
 }
 
 .main-section {
@@ -109,95 +109,80 @@ input:focus,button:focus,a:focus,textarea:focus {
   margin-top: 10rem;
 }
 
-.heading-primary {
-  font-size: 4.5rem;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  color: #000;
-  font-weight: 400;
-}
-
-.heading-primary__sm {
-  font-size: 2rem;
+.heading-sec__main {
   display: block;
-  margin-bottom: 2.5rem;
-}
-
-.heading-secondary {
   font-size: 4rem;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  line-height: 1.3;
-  color: #000;
-  font-weight: 400;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  color: #111
 }
 
-.heading-secondary__sm {
-  font-size: 1.8rem;
+.heading-sec__main--lt {
+  color: #111;
+  font-weight: 800
+}
+
+.heading-sec__main--lt::after {
+  content: '';
+  background: #7843E9 !important
+}
+
+.heading-sec__main::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 1.5rem);
+  height: 5px;
+  width: 3rem;
+  background: #7843E9;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-sec__main::after {
+      top:calc(100% + 1.2rem)
+  }
+}
+
+.heading-sec__sub {
   display: block;
-  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #555;
+  font-size: 2rem;
+  font-weight: 500;
+  max-width: 80rem;
+  margin: auto;
+  line-height: 1.6
 }
 
-.heading-tertiary {
-  font-size: 3.4rem;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  color: #000;
-  font-weight: 400;
-}
-
-.heading-quaternary {
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  color: #000;
-  font-weight: 400;
-}
-
-.text-primary {
-  font-size: 1.9rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-.text-primary span {
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.text-primary span:last-child {
-  margin-bottom: 0;
-}
-
-/* 75em === 1200px */
-@media (max-width: 75em) {
-  html {
-    font-size: 60%;
+@media only screen and (max-width: 37.5em) {
+  .heading-sec__sub {
+      font-size:1.8rem
   }
 }
 
-/* 56.25em === 900px */
-@media (max-width: 56.25em) {
-  html {
-    font-size: 58%;
-  }
+.heading-sec__sub--lt {
+  color: #333
 }
 
-/* 37.5em === 600px */
-@media (max-width: 37.5em) {
-  html {
-    font-size: 56%;
-  }
-  .btn {
-    padding: 2rem 4rem;
-  }
-  .heading-primary {
-    font-size: 4rem;
-  }
-  .heading-secondary {
-    font-size: 3.7rem;
-  }
-  .heading-tertiary {
-    font-size: 3rem;
+.heading-sm {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px
+}
+
+.sec-pad {
+  padding: 12rem 0
+}
+
+@media only screen and (max-width: 56.25em) {
+  .sec-pad {
+      padding:8rem 0
   }
 }
 
