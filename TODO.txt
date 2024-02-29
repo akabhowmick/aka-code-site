@@ -1,0 +1,11 @@
+Navbar => react router 
+Footer => import icons 
+Contact => have the text fields in 
+Hero => leave (?) or animations 
+Individual product pages => react router 
+
+Design 
+  Canvas logo 
+  Images for the case studies 
+
+Overall css => use the color themes 

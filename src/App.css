@@ -24,6 +24,14 @@
   --themeColor: 29, 161, 242;
 }
 
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit
+}
+
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -51,6 +59,10 @@ ul {
 
 li {
   text-decoration: none;
+}
+
+input:focus,button:focus,a:focus,textarea:focus {
+  outline: none
 }
 
 .btn {

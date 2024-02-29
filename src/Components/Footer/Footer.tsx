@@ -2,53 +2,64 @@ import "./Footer.css";
 export const Footer = () => {
   return (
     <footer className="main-footer">
-      <div className="main-footer__upper">
-        <div className="main-container">
-          <ul className="main-footer__links">
-            <li className="main-footer__link">
-              <a href="./index.html">Home</a>
-            </li>
-            <li className="main-footer__link">
-              <a href="./index.html#about">About</a>
-            </li>
-            <li className="main-footer__link">
-              <a href="./index.html#projects">Projects</a>
-            </li>
-            <li className="main-footer__link">
-              <a href="./index.html#contact">Contact</a>
-            </li>
-          </ul>
-          <div className="main-footer__mid-line"></div>
-          <div className="main-footer__socials">
-            <a href="#" className="main-footer__social-link">
-              <img
-                src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
-                alt=""
-                className="main-footer__social-link-icon"
-              />
-            </a>
-            <a href="#" className="main-footer__social-link">
-              <img
-                src="./assets/icons8-instagram-48.png"
-                alt=""
-                className="main-footer__social-link-icon"
-              />
-            </a>
-            <a href="#" className="main-footer__social-link">
-              <img
-                src="./assets/icons8-twitter-50.png"
-                alt=""
-                className="main-footer__social-link-icon"
-              />
-            </a>
-            <a href="#" className="main-footer__social-link">
-              <img
-                src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
-                alt=""
-                className="main-footer__social-link-icon"
-              />
-            </a>
+      <div className="main-container">
+        <div className="main-footer__upper">
+          <div className="main-footer__row main-footer__row-1">
+            <h2 className="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div className="main-footer__social-cont">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href=""
+                // ! update with my linked in
+              >
+                <img
+                  className="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="Akash Bhowmick Linkedin Profile"
+                />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/akabhowmick"
+              >
+                <img
+                  className="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="Akabhowmick Github Profile"
+                />
+              </a>
+            </div>
           </div>
+          <div className="main-footer__row main-footer__row-2">
+            <h2 className="heading heading-sm text-lt">
+              Akash Bhowmick
+            </h2>
+            <p className="main-footer__short-desc">
+              A Fullstack Developer
+              focused Web Development
+              building the Websites and
+              Web Applications that
+              leads to the product's success.
+            </p>
+          </div>
+        </div>
+        <div className="main-footer__lower">
+          &copy; Copyright
+          <script>
+            document.write( new
+            Date().getFullYear() );
+          </script>
+          . Made by
+          <a
+            target="_blank"
+            href="https://akashbhowmick.com"
+          >
+            Akash Bhowmick
+          </a>
         </div>
       </div>
     </footer>

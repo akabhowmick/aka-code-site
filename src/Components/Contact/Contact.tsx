@@ -1,55 +1,97 @@
 import "./Contact.css";
 export const Contact = () => {
   return (
-    <section id="contact" className="contact main-section">
+    <section
+      id="contact"
+      className="contact sec-pad dynamicBg"
+    >
       <div className="main-container">
-        <h2 className="heading-secondary">
-          <span className="heading-secondary__sm"> Contact 📞</span>
-          <span className="heading-secondary__main">
-            Feel free to Contact me by submitting the form below and I will get
-            back to you as soon as possible
+        <h2
+          className="heading heading-sec heading-sec__mb-med"
+        >
+          <span
+            className="heading-sec__main heading-sec__main--lt"
+            >Contact</span
+          >
+          <span
+            className="heading-sec__sub heading-sec__sub--lt"
+          >
+            Feel free to Contact me by
+            submitting the form below
+            and I will get back to you
+            as soon as possible
           </span>
         </h2>
-        <div className="main-section__content">
-          <div className="contact__form-cont">
-            <form className="contact__form">
-              <div className="contact__form-field">
-                <label htmlFor="name" className="contact__form-field-label">
-                  Name
-                </label>
-                <input
-                  placeholder="Enter Your Name"
-                  type="text"
-                  className="contact__form-field-input"
-                />
-              </div>
-              <div className="contact__form-field">
-                <label htmlFor="name" className="contact__form-field-label">
-                  Email
-                </label>
-                <input
-                  placeholder="Enter Your Email"
-                  type="text"
-                  className="contact__form-field-input"
-                />
-              </div>
-              <div className="contact__form-field">
-                <label htmlFor="name" className="contact__form-field-label">
-                  Message
-                </label>
-                <textarea
-                  placeholder="Enter Your Message"
-                  name="message"
-                  id=""
-                  className="contact__form-field-input"
-                ></textarea>
-              </div>
-              <button type="submit" className="contact__form-submit">
-                Submit
-              </button>
-            </form>
-            <div className="contact__form-visual"></div>
-          </div>
+        <div
+          className="contact__form-container"
+        >
+          <form
+            action="#"
+            className="contact__form"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="form-name"
+              value="form 1"
+            />
+            <div
+              className="contact__form-field"
+            >
+              <label
+                className="contact__form-label"
+                htmlFor="name"
+                >Name</label
+              >
+              <input
+                required
+                placeholder="Enter Your Name"
+                type="text"
+                className="contact__form-input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div
+              className="contact__form-field"
+            >
+              <label
+                className="contact__form-label"
+                htmlFor="email"
+                >Email</label
+              >
+              <input
+                required
+                placeholder="Enter Your Email"
+                type="email"
+                className="contact__form-input"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div
+              className="contact__form-field"
+            >
+              <label
+                className="contact__form-label"
+                htmlFor="message"
+                >Message</label
+              >
+              <textarea
+                required
+                className="contact__form-input"
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="btn btn--theme contact__btn"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </section>

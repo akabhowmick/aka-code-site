@@ -1,6 +1,6 @@
 import "./Portfolio.css";
-import { ProjectBox } from "./ProjectBox";
-import { projectInfo } from "./ProjectInfo";
+import { ProjectBox } from "../Project/ProjectBox";
+import { projectInfo } from "../Project/ProjectInfo";
 export const Portfolio = () => {
   return (
     <section id="projects" className="projects main-section">

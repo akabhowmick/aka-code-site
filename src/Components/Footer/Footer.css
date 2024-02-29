@@ -1,75 +1,85 @@
-/* Main Footer */
+.main-footer {
+  background: #000;
+  color: #fff
+}
 
 .main-footer__upper {
-  background: #000;
-  padding: 10rem 0;
-}
-
-.main-footer__links {
   display: flex;
-  max-width: 50rem;
-  align-items: center;
   justify-content: space-between;
-  margin: auto;
+  padding: 8rem 0
 }
 
-.main-footer__link a {
-  color: #fff;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
   .main-footer__upper {
-    padding: 7rem 0;
-  }
-
-  .main-footer__links {
-    display: block;
-  }
-
-  .main-footer__link a {
-    margin-bottom: 0.5rem;
-    padding: 3rem 1.5rem;
-    display: block;
+      padding:6rem 0
   }
 }
 
-.main-footer__mid-line {
-  background: grey;
-  height: 1px;
-  margin-top: 6rem;
+@media only screen and (max-width: 37.5em) {
+  .main-footer__upper {
+      display:block
+  }
 }
 
-.main-footer__socials {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  max-width: 25rem;
-  margin: auto;
-  margin-top: 6rem;
+.main-footer__row-1 {
+  order: 2
 }
 
-.main-footer__social-link-icon {
-  width: 2.5rem;
+@media only screen and (max-width: 56.25em) {
+  .main-footer__row-1 {
+      margin-bottom:5rem
+  }
 }
 
-.main-footer__bottom {
-  padding: 2rem;
-  background: #222;
+.main-footer__row-2 {
+  width: 40%;
+  order: 1;
+  max-width: 50rem
 }
 
-.main-footer__bottom-txt {
+@media only screen and (max-width: 56.25em) {
+  .main-footer__row-2 {
+      width:100%
+  }
+}
+
+.main-footer__short-desc {
+  margin-top: 2rem;
   color: #eee;
-  font-size: 1.3rem;
-  word-spacing: 2px;
-  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.7
 }
 
-.main-footer__bottom-txt a {
+.main-footer__social-cont {
+  margin-top: 2rem
+}
+
+.main-footer__icon {
+  margin-right: 1rem;
+  width: 2.5rem
+}
+
+.main-footer__icon--mr-none {
+  margin-right: 0
+}
+
+.main-footer__lower {
+  padding: 4rem 0;
+  border-top: 1px solid #444;
+  color: #eee;
+  font-size: 1.2rem;
+  text-align: left;
+  text-align: center
+}
+
+.main-footer__lower a {
   text-decoration: underline;
-  color: #fff;
-  font-weight: 700;
+  font-weight: bold;
+  margin-left: 2px
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main-footer__lower {
+      padding:3.5rem 0
+  }
 }
