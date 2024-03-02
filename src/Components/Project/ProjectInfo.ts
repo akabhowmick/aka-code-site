@@ -33,7 +33,7 @@ export const projectInfo: Project[] = [
     link: "https://jetquizapp.netlify.app/",
     githubLink:
       "https://github.com/akabhowmick/jet-quiz-app",
-    caseStudyLink: "project/1",
+    caseStudyLink: "projects/1",
   },
   //! Update
   {
@@ -59,7 +59,7 @@ export const projectInfo: Project[] = [
     link: "https://print3dverse.com/",
     githubLink:
       "https://github.com/akabhowmick/3d-site",
-    caseStudyLink: "project/2",
+    caseStudyLink: "projects/2",
   },
   //! Update tech stack and features
   {
@@ -83,7 +83,7 @@ export const projectInfo: Project[] = [
     link: "https://marutaekwondo.com/",
     githubLink:
       "https://github.com/akabhowmick/tkd-site",
-    caseStudyLink: "project/3",
+    caseStudyLink: "projects/3",
   },
   //! Update tech stack
   {
@@ -109,6 +109,6 @@ export const projectInfo: Project[] = [
     link: "https://queensfinestprints.com/",
     githubLink:
       "https://github.com/akabhowmick/queens-finest-prints",
-    caseStudyLink: "project/4",
+    caseStudyLink: "projects/4",
   },
 ];
