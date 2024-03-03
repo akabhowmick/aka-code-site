@@ -43,11 +43,7 @@
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(
-      to right,
-      rgba(245, 245, 245, 0.8),
-      rgba(245, 245, 245, 0.8)
-    ),
+  background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)),
     url(../../assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
@@ -121,11 +117,11 @@
   text-align: center;
   margin-bottom: 3.5rem;
   position: relative;
-  color: #111;
+  color: var(--med-dark-blue);
 }
 
 .heading-sec__main--lt {
-  color: #111;
+  color: var(--med-dark-blue);
   font-weight: 800;
 }
 
@@ -223,42 +219,60 @@
 
 /* About */
 .about {
-  background: rgb(252, 252, 252);
+  background: #fafafa;
 }
 
-.about__info {
+.about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 8rem;
+  grid-gap: 10rem;
 }
 
-@media (max-width: 37.5em) {
-  .about__info {
+@media only screen and (max-width: 56.25em) {
+  .about__content {
     grid-template-columns: 1fr;
-    grid-gap: 6rem;
-  }
-
-  .about__btn-theme {
-    width: 70%;
+    grid-gap: 8rem;
   }
 }
 
-.about__heading-quaternary {
+.about__content-title {
+  color: var(--med-dark-blue);
+  font-weight: 700;
+  font-size: 2.8rem;
   margin-bottom: 3rem;
 }
 
-.about__main-info {
+@media only screen and (max-width: 37.5em) {
+  .about__content-title {
+    font-size: 2.4rem;
+  }
+}
+
+.about__content-details-para {
+  font-size: 1.8rem;
+  color: #666;
+  max-width: 60rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about__content-details-para--hl {
+  font-weight: 700;
+  margin: 0 3px;
+}
+
+.about__content-details-para:last-child {
   margin-bottom: 4rem;
 }
 
-.about__text-primary {
-  margin-bottom: 4rem;
+.about__content-details-para a {
+  text-decoration: underline;
+  font-weight: 700;
+  color: #7843e9;
+  margin: 0 3px;
 }
 
-.about__info-heading {
-  margin-bottom: 3rem;
-  color: #555;
-}
+/* About skills styles */
 
 .about__skills {
   display: flex;
@@ -272,9 +286,8 @@
   padding: 1.5rem 2rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
-
   background: #eee;
-  color: #666;
+  color: var(--med-dark-blue);
   border-radius: 5px;
   font-weight: 500;
 }
@@ -295,8 +308,7 @@
   padding: 3rem;
   border-radius: 5px;
   background: #fff;
-  box-shadow: rgba(100, 100, 111, 0.2)
-    0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .skills-showcase__list-item i {
@@ -324,10 +336,7 @@
 
   .skills-showcase__list {
     display: grid;
-    grid-template-columns: repeat(
-      4,
-      1fr
-    );
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5rem;
   }
 
@@ -342,10 +351,7 @@
   }
 
   .skills-showcase__list {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    );
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem;
   }
 }

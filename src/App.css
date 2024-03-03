@@ -24,13 +24,14 @@
   --themeColor: 29, 161, 242;
 }
 
-*,*::after,*::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: inherit
+  font-family: inherit;
 }
-
 
 html {
   font-size: 62.5%;
@@ -59,33 +60,37 @@ ul {
 
 li {
   text-decoration: none;
+  list-style: none;
 }
 
-input:focus,button:focus,a:focus,textarea:focus {
-  outline: none
+input:focus,
+button:focus,
+a:focus,
+textarea:focus {
+  outline: none;
 }
 
 .btn {
   font-family: inherit;
   letter-spacing: 1px;
   font-weight: 700;
-  border: none;
   box-shadow: none;
   cursor: pointer;
   padding: 1.8rem 4rem;
   font-size: 1.8rem;
   border-radius: 5px;
-  border: 2px solid rgba(var(--themeColor), 1);
+  border: 2px solid var(--light-dark-blue);
+  margin-top: 1rem;
 }
 
 .btn-theme {
-  background: rgba(var(--themeColor), 1);
+  background: var(--light-dark-blue);
   color: #fff;
   box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
 }
 
 .btn-inv {
-  color: rgba(var(--themeColor), 1);
+  color: var(--light-dark-blue);
   background: #fff;
 }
 
@@ -118,34 +123,34 @@ input:focus,button:focus,a:focus,textarea:focus {
   text-align: center;
   margin-bottom: 3.5rem;
   position: relative;
-  color: #111
+  color: #111;
 }
 
 .heading-sec__main--lt {
   color: #111;
-  font-weight: 800
+  font-weight: 800;
 }
 
 .heading-sec__main--lt::after {
-  content: '';
-  background: #7843E9 !important
+  content: "";
+  background: #7843e9 !important;
 }
 
 .heading-sec__main::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(100% + 1.5rem);
   height: 5px;
   width: 3rem;
-  background: #7843E9;
+  background: #7843e9;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 37.5em) {
   .heading-sec__main::after {
-      top:calc(100% + 1.2rem)
+    top: calc(100% + 1.2rem);
   }
 }
 
@@ -157,32 +162,32 @@ input:focus,button:focus,a:focus,textarea:focus {
   font-weight: 500;
   max-width: 80rem;
   margin: auto;
-  line-height: 1.6
+  line-height: 1.6;
 }
 
 @media only screen and (max-width: 37.5em) {
   .heading-sec__sub {
-      font-size:1.8rem
+    font-size: 1.8rem;
   }
 }
 
 .heading-sec__sub--lt {
-  color: #333
+  color: #333;
 }
 
 .heading-sm {
   font-size: 2.2rem;
   text-transform: uppercase;
-  letter-spacing: 1px
+  letter-spacing: 1px;
 }
 
 .sec-pad {
-  padding: 12rem 0
+  padding: 12rem 0;
 }
 
 @media only screen and (max-width: 56.25em) {
   .sec-pad {
-      padding:8rem 0
+    padding: 8rem 0;
   }
 }
 

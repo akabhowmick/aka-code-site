@@ -34,7 +34,6 @@ export const ProjectBox = ({
         <a
           className="btn btn--med btn--theme dynamicBgClr"
           href={caseStudyLink}
-          target="_blank"
         >
           Case Study
         </a>

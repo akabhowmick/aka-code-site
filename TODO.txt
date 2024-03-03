@@ -1,11 +1,21 @@
-Navbar => react router 
-Footer => import icons 
-Contact => have the text fields in 
-Hero => leave (?) or animations 
-Individual product pages => react router 
+Navbar 
+  => react router 
+  => make it responsive with hamburger 
+
+Contact 
+  => combine the different react bootstrap things in 
+
+Hero 
+  => leave (?) or animations 
+
+
+Individual product pages 
+  => react router 
+  => netlify issues 
 
 Design 
   Canvas logo 
   Images for the case studies 
 
-Overall css => use the color themes 
+Overall css 
+  => use the color themes 
