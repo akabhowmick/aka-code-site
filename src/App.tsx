@@ -15,6 +15,7 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="projects/:projectId" element={<ProjectPage />} />
+        <Route path="*" element={<Home />} />
       </Route>
     )
   );

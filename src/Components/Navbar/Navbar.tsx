@@ -1,77 +1,75 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import logoImage from "../../assets/logo.png";
 import "./Navbar.css";
 
+const Hamburger = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="52" height="24" viewBox="0 0 52 24">
+    <g id="Group_9" data-name="Group 9" transform="translate(-294 -47)">
+      <rect
+        id="Rectangle_3"
+        data-name="Rectangle 3"
+        width="42"
+        height="4"
+        rx="2"
+        transform="translate(304 47)"
+        fill="#574c4c"
+      />
+      <rect
+        id="Rectangle_5"
+        data-name="Rectangle 5"
+        width="42"
+        height="4"
+        rx="2"
+        transform="translate(304 67)"
+        fill="#574c4c"
+      />
+      <rect
+        id="Rectangle_4"
+        data-name="Rectangle 4"
+        width="52"
+        height="4"
+        rx="2"
+        transform="translate(294 57)"
+        fill="#574c4c"
+      />
+    </g>
+  </svg>
+);
+
 export const Navbar = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
+
   return (
-    <header className="header">
-      <div className="header__content">
-        <div className="header__logo-container">
-          <div className="header__logo-img-cont">
-            <img
-              src="https://i.postimg.cc/TwY74D31/profile-pic-8.png"
-              alt="Akash Bhowmick Logo Image"
-              className="header__logo-img"
-            />
-          </div>
-          <span className="header__logo-sub">Akash Bhowmick</span>
+    <nav className="navbar">
+      <div className="container">
+        <div className="logo">
+          <img style={{ width: "100%" }} src={logoImage} alt="logo-Image" />
         </div>
-        <div className="header__main">
-          <ul className="header__links">
-            <li className="header__link-wrapper">
-              <a href="./" className="header__link">
-                Home
-              </a>
-            </li>
-            <li className="header__link-wrapper">
-              <a href="./#about" className="header__link">
-                About
-              </a>
-            </li>
-            <li className="header__link-wrapper">
-              <a href="./#projects" className="header__link">
-                Projects
-              </a>
-            </li>
-            <li className="header__link-wrapper">
-              <a href="./#contact" className="header__link">
-                Contact
-              </a>
-            </li>
-          </ul>
-          <div className="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              className="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              className="header__main-ham-menu-close d-none"
-            />
-          </div>
+        <div className="menu-icon" onClick={handleShowNavbar}>
+          <Hamburger />
         </div>
-      </div>
-      <div className="header__sm-menu">
-        <div className="header__sm-menu-content">
-          <ul className="header__sm-menu-links">
-            <li className="header__sm-menu-link">
-              <a href="./"> Home </a>
+        <div className={`nav-elements ${showNavbar && "active"}`}>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
             </li>
-
-            <li className="header__sm-menu-link">
-              <a href="./#about">About</a>
+            <li>
+              <NavLink to="projects">Projects</NavLink>
             </li>
-
-            <li className="header__sm-menu-link">
-              <a href="./#projects">Projects</a>
+            <li>
+              <NavLink to="/about">About</NavLink>
             </li>
-
-            <li className="header__sm-menu-link">
-              <a href="./#contact">Contact</a>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };

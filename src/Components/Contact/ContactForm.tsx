@@ -12,14 +12,23 @@ export const ContactForm = () => {
   const schema = yup.object().shape({
     firstName: yup.string().required(),
     lastName: yup.string().required(),
-    email: yup.string().required(),
+    email: yup.string().email().required(),
     message: yup.string().required(),
   });
+
+  const handleFormSubmitClick = (e: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    message: string;
+  }) => {
+    console.log("form submit", e.firstName);
+  };
 
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={console.log}
+      onSubmit={(e) => handleFormSubmitClick(e)}
       initialValues={{
         firstName: "",
         lastName: "",
@@ -31,7 +40,11 @@ export const ContactForm = () => {
         <Form onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col}>
-              <FloatingLabel controlId="firstName" label="First name" className="mb-3">
+              <FloatingLabel
+                controlId="firstName"
+                label="First name"
+                className="mb-3 form-input-label"
+              >
                 <Form.Control
                   className="contact-form-input"
                   type="text"
@@ -41,7 +54,6 @@ export const ContactForm = () => {
                   isValid={touched.firstName && !errors.firstName}
                 />
               </FloatingLabel>
-              <Form.Control.Feedback type="valid" tooltip>Looks good!</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid" tooltip>
                 {errors.firstName}
               </Form.Control.Feedback>
@@ -57,7 +69,6 @@ export const ContactForm = () => {
                   isValid={touched.lastName && !errors.lastName}
                 />
               </FloatingLabel>
-              <Form.Control.Feedback type="valid" tooltip>Looks good!</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid" tooltip>
                 {errors.lastName}
               </Form.Control.Feedback>
@@ -73,7 +84,6 @@ export const ContactForm = () => {
                   isValid={touched.email && !errors.email}
                 />
               </FloatingLabel>
-              <Form.Control.Feedback type="valid" tooltip>Looks good!</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid" tooltip>
                 {errors.email}
               </Form.Control.Feedback>
@@ -84,14 +94,12 @@ export const ContactForm = () => {
               <Form.Control
                 className="contact-form-input"
                 as="textarea"
-                placeholder="Leave a comment here"
-                style={{ height: "100px" }}
+                style={{ height: "200px" }}
                 value={values.message}
                 onChange={handleChange}
                 isValid={touched.message && !errors.message}
               />
             </FloatingLabel>
-            <Form.Control.Feedback type="valid" tooltip>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid" tooltip>
               {errors.message}
             </Form.Control.Feedback>

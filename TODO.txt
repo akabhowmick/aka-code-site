@@ -1,17 +1,12 @@
-Navbar 
-  => react router 
-  => make it responsive with hamburger 
-
 Contact 
-  => combine the different react bootstrap things in 
+  => combine with backend 
 
 Hero 
   => leave (?) or animations 
 
 
 Individual product pages 
-  => react router 
-  => netlify issues 
+  => beatify 
 
 Design 
   Canvas logo 

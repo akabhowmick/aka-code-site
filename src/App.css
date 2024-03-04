@@ -80,16 +80,20 @@ textarea:focus {
   font-size: 1.8rem;
   border-radius: 5px;
   border: 2px solid var(--light-dark-blue);
+  background: var(--med-dark-blue);
   margin-top: 1rem;
+  color: #fff;
 }
 
-.btn-theme {
+.btn-theme,
+.btn-inv:hover {
   background: var(--light-dark-blue);
   color: #fff;
   box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
 }
 
-.btn-inv {
+.btn-inv,
+.btn-theme:hover {
   color: var(--light-dark-blue);
   background: #fff;
 }
@@ -129,23 +133,6 @@ textarea:focus {
 .heading-sec__main--lt {
   color: #111;
   font-weight: 800;
-}
-
-.heading-sec__main--lt::after {
-  content: "";
-  background: #7843e9 !important;
-}
-
-.heading-sec__main::after {
-  content: "";
-  position: absolute;
-  top: calc(100% + 1.5rem);
-  height: 5px;
-  width: 3rem;
-  background: #7843e9;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
 }
 
 @media only screen and (max-width: 37.5em) {

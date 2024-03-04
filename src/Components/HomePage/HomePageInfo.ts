@@ -9,14 +9,12 @@ export const techStack = [
   "java",
   "git",
   "linux",
-  "vscode",
   "c",
   "MongoDB",
   "Supabase",
   "Firebase",
   "PostgreSQL",
   "Express",
-  "MATLAB",
 ];
 
 export const techIcons = [
