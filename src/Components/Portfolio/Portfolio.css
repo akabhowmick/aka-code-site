@@ -119,13 +119,3 @@
       text-align: center
   }
 }
-
-.project-details__links-btn:last-child {
-  margin: 0
-}
-
-@media only screen and (max-width: 37.5em) {
-  .project-details__links-btn:last-child {
-      margin:0
-  }
-}

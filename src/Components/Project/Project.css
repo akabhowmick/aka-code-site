@@ -72,6 +72,9 @@
   .projects__row-content-desc {
       font-size:1.7rem
   }
+  .project-details__links{
+    text-align: center;
+  }
 }
 
 .skills {
