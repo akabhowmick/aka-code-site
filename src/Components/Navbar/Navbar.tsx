@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import logoImage from "../../assets/logo.png";
 import "./Navbar.css";
 
@@ -56,16 +55,16 @@ export const Navbar = () => {
         <div className={`nav-elements ${showNavbar && "active"}`}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <a href="/">Home</a>
             </li>
             <li>
-              <NavLink to="projects">Projects</NavLink>
+              <a href="/#projects">Projects</a>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <a href="/#about">About</a>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <a href="/#contact">Contact</a>
             </li>
           </ul>
         </div>

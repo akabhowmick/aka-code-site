@@ -202,12 +202,6 @@
   margin-bottom: 3rem;
 }
 
-@media only screen and (max-width: 37.5em) {
-  .about__content-title {
-    font-size: 2.4rem;
-  }
-}
-
 .about__content-details-para {
   font-size: 1.8rem;
   color: #666;
@@ -335,7 +329,7 @@
     min-height: unset;
   }
   .home-hero__content {
-    padding: 5rem 0;
+    padding: 8rem 0 0;
     margin: auto;
     position: static;
     transform: translate(0, 0);
@@ -343,7 +337,10 @@
   .heading-primary {
     font-size: 3.5rem;
   }
-  
+  .about__content-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 56.25em) {
