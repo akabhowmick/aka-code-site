@@ -98,3 +98,7 @@
 .main-footer a:hover {
   color: var(--med-medium-blue);
 }
+
+footer i {
+  font-size: 3rem;
+}

@@ -36,7 +36,7 @@
   font-size: 1.5rem;
   color: black;
   padding: 1.5rem 1rem;
-  background-color: #fff;
+  background-color: rgba(245, 245, 245, 0.8);
   color: black;
   border: 1px solid var(--med-dark-blue);
   border-radius: 5px;
@@ -50,23 +50,28 @@
 }
 
 .contactform label,
-.contactform .show {
+.contactform .expandable {
   text-align: left;
   font-weight: 700;
 }
 
-.contactform label{
+.contactform label {
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
 
+.contactform .expandable,
 .contactform .show {
-  font-size: 1.35rem;
-  background-color: #FFBABA;
-  color: #D8000C;
+  background-color: var(--bs-success);
   padding: 0.4rem;
   margin-bottom: 0.5rem;
   border-radius: 5px;
+}
+
+.contactform .show {
+  font-size: 1.35rem;
+  background-color: #ffbaba;
+  color: #d8000c;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -80,7 +85,7 @@
     margin: -5rem 0 5rem;
   }
   #contact {
-    padding: 0.5rem;
+    padding: 4rem 0.5rem;
   }
   .form-row-1 {
     flex-wrap: wrap;

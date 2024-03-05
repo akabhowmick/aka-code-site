@@ -1,6 +1,4 @@
 import "./Footer.css";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
 export const Footer = () => {
   return (
@@ -22,13 +20,12 @@ export const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href=""
-                // ! update with my linked in
+                href="https://www.linkedin.com/in/akash-bhowmick-78876721b/"
               >
-                <LinkedInIcon className="social_media_icons" fontSize="large" />
+                <i className="devicon-linkedin-plain"></i>
               </a>
               <a target="_blank" rel="noreferrer" href="https://github.com/akabhowmick">
-                <GitHubIcon className="social_media_icons" fontSize="large" />
+                <i className="social-icons devicon-github-original-wordmark"></i>
               </a>
             </div>
           </div>

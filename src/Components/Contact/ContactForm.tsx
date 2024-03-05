@@ -49,16 +49,12 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
               value={formik.values.from_name}
             />
-            <div
-              className={`expandable ${
-                formik.touched.from_name && formik.errors.from_name ? "show" : ""
-              }`}
-            >
+            <div className={`expandable ${formik.errors.from_name ? "show" : ""}`}>
               {formik.errors.from_name}
             </div>
           </div>
           <div className="contact-form-div">
-            <label htmlFor="subject">Subject</label> 
+            <label htmlFor="subject">Subject</label>
             <input
               className="contact-form-input"
               id="subject"
@@ -69,16 +65,12 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
               value={formik.values.subject}
             />
-            <div
-              className={`expandable ${
-                formik.touched.subject && formik.errors.subject ? "show" : ""
-              }`}
-            >
+            <div className={`expandable ${formik.errors.subject ? "show" : ""}`}>
               {formik.errors.subject}
             </div>
           </div>
           <div className="contact-form-div">
-            <label htmlFor="reply_to">Email</label> 
+            <label htmlFor="reply_to">Email</label>
             <input
               className="contact-form-input"
               id="reply_to"
@@ -89,11 +81,7 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
               value={formik.values.reply_to}
             />
-            <div
-              className={`expandable ${
-                formik.touched.reply_to && formik.errors.reply_to ? "show" : ""
-              }`}
-            >
+            <div className={`expandable ${formik.errors.reply_to ? "show" : ""}`}>
               {formik.errors.reply_to}
             </div>
           </div>
@@ -109,11 +97,7 @@ export const ContactForm = () => {
             onChange={formik.handleChange}
             value={formik.values.message}
           />
-          <div
-            className={`expandable ${
-              formik.touched.message && formik.errors.message ? "show" : ""
-            }`}
-          >
+          <div className={`expandable ${formik.errors.message ? "show" : ""}`}>
             {formik.errors.message}
           </div>
         </div>
