@@ -33,7 +33,6 @@ export const projectInfo: Project[] = [
     githubLink: "https://github.com/akabhowmick/jet-quiz-app",
     caseStudyLink: "projects/1",
   },
-  //! Update
   {
     name: "Print3Dverse",
     description: [
@@ -51,9 +50,9 @@ export const projectInfo: Project[] = [
       "Material-UI (MUI)",
     ],
     features: [
-      "Quiz Taking: Users can select from a variety of quizzes on different topics and test their knowledge.",
-      "Score Tracking: The app keeps track of users' scores and displays them at the end of each quiz.",
-      "Leader Board: Users can see how their scores compare to others on the leaderboard.",
+      "You can put things in your cart and securely check out using the paypal integration",
+      "Provide the seller your contact information so that they can reach out to you and ship you your products",
+      "Customize your products by adding your images after the product has been ordered",
       "Responsive Design: The app is designed to be responsive and work well on both desktop and mobile devices.",
     ],
     image: laptopThreeImage,
@@ -61,7 +60,6 @@ export const projectInfo: Project[] = [
     githubLink: "https://github.com/akabhowmick/3d-site",
     caseStudyLink: "projects/2",
   },
-  //! Update tech stack and features
   {
     name: "TaekwonMaru",
     description: [
@@ -70,17 +68,17 @@ export const projectInfo: Project[] = [
     ],
     techStack: ["HTML", "CSS", "Javascript"],
     features: [
-      "Quiz Taking: Users can select from a variety of quizzes on different topics and test their knowledge.",
-      "Score Tracking: The app keeps track of users' scores and displays them at the end of each quiz.",
-      "Leader Board: Users can see how their scores compare to others on the leaderboard.",
-      "Responsive Design: The app is designed to be responsive and work well on both desktop and mobile devices.",
+      "View the school's programs and understand which might fit your needs the best.",
+      "View and learn about the school's staff and masters, and see their credentials",
+      "Gain access to web exclusive offers and deals!",
+      "Contact the masters directly to learn more about Taekwondo and K-Pop Dance Classes.",
+      "Keep up to date with the school's schedule and current events. "
     ],
     image: laptopTkdImage,
     link: "https://marutaekwondo.com/",
     githubLink: "https://github.com/akabhowmick/tkd-site",
     caseStudyLink: "projects/3",
   },
-  //! Update tech stack
   {
     name: "Queens Finest Prints",
     description: [

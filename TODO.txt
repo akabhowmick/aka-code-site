@@ -1,9 +1,0 @@
-Hero 
-  => animations 
-
-Individual product pages 
-  => beatify 
-
-Design 
-  Canvas logo 
-  Images for the case studies 

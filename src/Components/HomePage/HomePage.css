@@ -317,13 +317,12 @@ section.home-hero .hero-btn {
 .skills-showcase__list-item {
   padding: 3rem;
   border-radius: 5px;
-  background: #fff;
+  background: var(--med-light-blue);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .skills-showcase__list-item i {
-  color: rgba(var(--themeColor), 1);
-  color: #999;
+  color: var(--med-medium-blue);
   font-size: 5rem;
 }
 
@@ -331,7 +330,6 @@ section.home-hero .hero-btn {
   .skills-showcase__list-item {
     padding: 1.5rem;
     border-radius: 5px;
-    background: #fff;
   }
 
   .skills-showcase__list-item i {
@@ -362,7 +360,8 @@ section.home-hero .hero-btn {
 
   .skills-showcase__list {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4rem;
+    grid-gap: 2rem;
+    padding: 0;
   }
 
   .skills {
@@ -378,7 +377,7 @@ section.home-hero .hero-btn {
 
 @media only screen and (max-width: 37.5em) {
   .text_primary {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .home-hero {
     height: unset;
@@ -396,6 +395,16 @@ section.home-hero .hero-btn {
   .about__content-title {
     font-size: 2.4rem;
     text-align: center;
+  }
+
+  section.home-hero .hero-btn {
+    display: flex;
+    padding: 0px 0 15rem 0;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 

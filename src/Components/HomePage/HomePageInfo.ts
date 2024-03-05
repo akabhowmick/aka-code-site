@@ -23,9 +23,10 @@ export const techIcons = [
   "devicon-javascript-plain",
   "devicon-react-original",
   "devicon-sass-original",
-  "devicon-nodejs-plain",
+  "devicon-supabase-plain",
   "devicon-git-plain",
-  "devicon-python-plain",
+  "devicon-cplusplus-plain",
+  "devicon-vscode-plain"
 ];
 
 export const myStory = [
