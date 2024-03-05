@@ -20,15 +20,19 @@ export const ProjectPage = () => {
       <Navbar />
       <section className="project-cs-hero">
         <div className="project-cs-hero__content">
+          <div className="air air1"></div>
+          <div className="air air2"></div>
+          <div className="air air3"></div>
+          <div className="air air4"></div>
           <h1 className="heading-primary">{project?.name}</h1>
           <div className="project-cs-hero__info">
-            <p className="text-primary">
+            <p className="text_primary">
               This page contains the case study of the {project?.name} which includes the Project
               Overview, Tools Used and Live Links to the official product.
             </p>
           </div>
           <div className="project-cs-hero__cta">
-            <a href={project?.link} className="btn btn--bg" target="_blank" rel="noreferrer">
+            <a id="project-page-cta" href={project?.link} className="btn btn--bg" target="_blank" rel="noreferrer">
               Live Link
             </a>
           </div>
