@@ -70,12 +70,23 @@ textarea:focus {
   outline: none;
 }
 
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .btn {
   font-family: inherit;
   letter-spacing: 1px;
   font-weight: 700;
   box-shadow: none;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   padding: 1.8rem 4rem;
   font-size: 1.8rem;
   border-radius: 5px;
@@ -83,6 +94,9 @@ textarea:focus {
   background: var(--med-dark-blue);
   margin-top: 1rem;
   color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-theme,
@@ -102,6 +116,41 @@ textarea:focus {
   padding: 1.3rem 2rem;
   font-size: 1.6rem;
   border: none;
+}
+
+.btn {
+  cursor: pointer;
+  background: var(--light-dark-blue);
+  border: 1px solid var(--med-medium-blue);
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: var(--med-medium-blue);
+  color: #fff;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
 }
 
 .main-container {

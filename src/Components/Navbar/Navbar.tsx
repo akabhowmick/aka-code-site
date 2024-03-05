@@ -46,9 +46,15 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="logo">
-          <img style={{ width: "100%" }} src={logoImage} alt="logo-Image" />
-        </div>
+        <a href="/">
+          <div className="header__logo-container">
+            <div className="header__logo-img-cont">
+              <img src={logoImage} alt="Akash Bhowmick Logo Image" className="header__logo-img" />
+            </div>
+            <span className="header__logo-sub">Akash Bhowmick</span>
+          </div>
+        </a>
+
         <div className="menu-icon" onClick={handleShowNavbar}>
           <Hamburger />
         </div>

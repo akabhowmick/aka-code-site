@@ -18,7 +18,7 @@ export const HomePage = () => {
               <button className="btn btn-theme home-hero__btn-theme">Projects</button>
             </a>
             <a href="./#contact">
-              <button className="btn btn-inv home-hero__btn-theme">Contact</button>
+              <button className="btn btn-theme home-hero__btn-theme">Contact</button>
             </a>
           </div>
         </div>
@@ -45,8 +45,14 @@ export const HomePage = () => {
                   );
                 })}
               </div>
-              <a href="./#contact" className="btn btn--med btn--theme dynamicBgClr">
-                Contact
+              <a href="./#contact">
+                <button className="btn">
+                  <svg width="180px" height="60px" viewBox="0 0 180 60" className="border">
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" className="bg-line" />
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
+                  </svg>
+                  <span>HOVER ME</span>
+                </button>
               </a>
             </div>
             <div className="about__content-skills">
