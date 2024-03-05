@@ -9,23 +9,21 @@ export const HomePage = () => {
         <div className="air air2"></div>
         <div className="air air3"></div>
         <div className="air air4"></div>
-        <div className="animated-background">
-          <div className="home-hero__content">
-            <h1 className="heading-primary">Hi, I'm Akash Bhowmick!</h1>
-            <div className="home-hero__info">
-              <p className="text_primary">
-                A Full Stack Web Developer that loves to build and manage Websites and Web
-                Applications that leads to the success of the overall product
-              </p>
-            </div>
-            <div className="hero-btn">
-              <a href="./#projects">
-                <button className="btn btn-theme home-hero__btn-theme">Projects</button>
-              </a>
-              <a href="./#contact">
-                <button className="btn btn-theme home-hero__btn-theme">Contact</button>
-              </a>
-            </div>
+        <div className="home-hero__content">
+          <h1 className="heading-primary">Hi, I'm Akash Bhowmick!</h1>
+          <div className="home-hero__info">
+            <p className="text_primary">
+              A Full Stack Web Developer that loves to build and manage Websites and Web
+              Applications that leads to the success of the overall product
+            </p>
+          </div>
+          <div className="hero-btn">
+            <a href="./#projects">
+              <button className="btn btn-theme home-hero__btn-theme">Projects</button>
+            </a>
+            <a href="./#contact">
+              <button className="btn btn-theme home-hero__btn-theme">Contact</button>
+            </a>
           </div>
         </div>
       </section>

@@ -1,4 +1,7 @@
-import mockImage from "../../assets/mock.png";
+import laptopThreeImage from "../../assets/laptop3D.png";
+import laptopQuizImage from "../../assets/laptopJetQuiz.png";
+import laptopTkdImage from "../../assets/laptopTkd.png";
+import laptopQFPImage from "../../assets/laptopQFP.png";
 
 export interface Project {
   name: string;
@@ -25,7 +28,7 @@ export const projectInfo: Project[] = [
       "Leader Board: Users can see how their scores compare to others on the leaderboard.",
       "Responsive Design: The app is designed to be responsive and work well on both desktop and mobile devices.",
     ],
-    image: mockImage,
+    image: laptopQuizImage,
     link: "https://jetquizapp.netlify.app/",
     githubLink: "https://github.com/akabhowmick/jet-quiz-app",
     caseStudyLink: "projects/1",
@@ -53,7 +56,7 @@ export const projectInfo: Project[] = [
       "Leader Board: Users can see how their scores compare to others on the leaderboard.",
       "Responsive Design: The app is designed to be responsive and work well on both desktop and mobile devices.",
     ],
-    image: mockImage,
+    image: laptopThreeImage,
     link: "https://print3dverse.com/",
     githubLink: "https://github.com/akabhowmick/3d-site",
     caseStudyLink: "projects/2",
@@ -72,7 +75,7 @@ export const projectInfo: Project[] = [
       "Leader Board: Users can see how their scores compare to others on the leaderboard.",
       "Responsive Design: The app is designed to be responsive and work well on both desktop and mobile devices.",
     ],
-    image: mockImage,
+    image: laptopTkdImage,
     link: "https://marutaekwondo.com/",
     githubLink: "https://github.com/akabhowmick/tkd-site",
     caseStudyLink: "projects/3",
@@ -93,7 +96,7 @@ export const projectInfo: Project[] = [
       "User-friendly interface optimized for both desktop and mobile devices.",
       "Integration with React-Bootstrap for responsive design and UI components.",
     ],
-    image: mockImage,
+    image: laptopQFPImage,
     link: "https://queensfinestprints.com/",
     githubLink: "https://github.com/akabhowmick/queens-finest-prints",
     caseStudyLink: "projects/4",
