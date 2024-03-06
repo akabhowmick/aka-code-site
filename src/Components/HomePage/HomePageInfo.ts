@@ -30,7 +30,8 @@ export const techIcons = [
 ];
 
 export const myStory = [
-  "Lorem ipsum dolor sit atone, consectetur adopting elite. Error, a liquid! Queen corrupting magma fire militia labor magma soaps veritas alias fugit. Explicate aut corporate ode repeal? Lorem ipsum dolor ",
-  "Lorem ipsum dolor sit atone, consectetur adopting elite. Error, a liquid! Queen corrupting magma fire militia labor magma soaps veritas alias fugit. Explicate aut corporate ode repeal? Lorem ipsum dolor ",
-  "Lorem ipsum dolor sit atone, consectetur adopting elite. Error, a liquid! Queen corrupting magma fire militia labor magma soaps veritas alias fugit. Explicate aut corporate ode repeal? Lorem ipsum dolor ",
+  "Dynamic and innovative React Developer with a proven track record of delivering high-quality web applications. Check out some of my work in the Projects section!",
+  "Proficient in front-end technologies and frameworks, with a strong emphasis on React.js.",
+  "Experienced in collaborating with cross-functional teams to analyze requirements, design solutions, and implement scalable and efficient code.",
+  "I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me."
 ];
