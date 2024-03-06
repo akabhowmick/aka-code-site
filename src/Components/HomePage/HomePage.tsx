@@ -4,14 +4,14 @@ import "./HomePage.css";
 export const HomePage = () => {
   return (
     <>
-      <section className="home-hero">
-        <div className="air air1"></div>
-        <div className="air air2"></div>
-        <div className="air air3"></div>
-        <div className="air air4"></div>
-        <div className="home-hero__content">
+      <section className="project-cs-hero">
+        <div className="project-cs-hero__content">
+          <div className="air air1"></div>
+          <div className="air air2"></div>
+          <div className="air air3"></div>
+          <div className="air air4"></div>
           <h1 className="heading-primary">Hi, I'm Akash Bhowmick!</h1>
-          <div className="home-hero__info">
+          <div className="project-cs-hero__info">
             <p className="text_primary">
               A Full Stack Web Developer that loves to build and manage Websites and Web
               Applications that leads to the success of the overall product
@@ -27,7 +27,6 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-
       <section id="about" className="about sec-pad">
         <div className="main-container">
           <h2 className="heading heading-sec heading-sec__mb-med">
