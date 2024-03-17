@@ -20,11 +20,17 @@ export const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Akash Bhowmick LinkedIn"
                 href="https://www.linkedin.com/in/akash-bhowmick-78876721b/"
               >
                 <i className="devicon-linkedin-plain"></i>
               </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/akabhowmick">
+              <a
+                target="_blank"
+                aria-label="Akash Bhowmick GitHub"
+                rel="noreferrer"
+                href="https://github.com/akabhowmick"
+              >
                 <i className="social-icons devicon-github-original-wordmark"></i>
               </a>
             </div>

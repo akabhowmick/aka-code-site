@@ -75,12 +75,12 @@ section .air.air4 {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
-  color: #fff;
+  color: var(--dark-dark-blue);
   font-weight: 800;
 }
 
 .text_primary {
-  color: #fff;
+  color: var(--med-dark-blue);
   font-size: 2.2rem;
   text-align: center;
   width: 100%;
@@ -377,7 +377,8 @@ section.home-hero .hero-btn {
 
 @media only screen and (max-width: 37.5em) {
   .text_primary {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 800;
   }
   .home-hero {
     height: unset;

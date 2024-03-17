@@ -1,6 +1,6 @@
 .project-cs-hero {
   width: 100%;
-  background: #3586ff;
+  background: var(--light-light-blue);
   overflow: hidden;
 }
 

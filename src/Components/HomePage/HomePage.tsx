@@ -60,15 +60,15 @@ export const HomePage = () => {
             </div>
             <div className="about__content-skills">
               <h3 className="about__content-title">My Skills</h3>
-              <div className="skills">
+              <ul className="skills">
                 {techStack.map((tech) => {
                   return (
-                    <li key={tech} className="about__skill">
+                    <li key={tech} aria-label={tech} className="about__skill">
                       {tech}
                     </li>
                   );
                 })}
-              </div>
+              </ul>
             </div>
           </div>
         </div>

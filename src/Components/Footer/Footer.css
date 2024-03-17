@@ -72,6 +72,7 @@
   text-decoration: underline;
   font-weight: bold;
   margin-left: 2px;
+  color: var(--dark-light-blue);
 }
 
 @media only screen and (max-width: 56.25em) {
