@@ -63,10 +63,11 @@ export const projectInfo: Project[] = [
   {
     name: "TaekwonMaru",
     description: [
-      "This is a responsive website for a Taekwondo business. It is built using HTML, CSS, and JavaScript. The website includes information about the business, its classes, instructors, and contact details",
+      "This is a responsive website for a Taekwondo business. It is built using React and Typescript, aiming to be highly accessible and follow the best practices. The website includes information about the business, its classes, instructors, and contact details",
       "Additionally, it features a contact form through which users can directly communicate with the business owners.",
+      "This site can also be easily customized to serve as a template for similar small businesses"
     ],
-    techStack: ["HTML", "CSS", "Javascript"],
+    techStack: ["HTML", "CSS", "Javascript", "React", "TypeScript", "MUI"],
     features: [
       "View the school's programs and understand which might fit your needs the best.",
       "View and learn about the school's staff and masters, and see their credentials",
@@ -76,7 +77,7 @@ export const projectInfo: Project[] = [
     ],
     image: laptopTkdImage,
     link: "https://marutaekwondo.com/",
-    githubLink: "https://github.com/akabhowmick/tkd-site",
+    githubLink: "https://github.com/akabhowmick/TaekwonMaru-React",
     caseStudyLink: "projects/3",
   },
   {
