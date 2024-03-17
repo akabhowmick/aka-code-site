@@ -33,74 +33,65 @@ export const ContactForm = () => {
       }
     },
   });
+
+  const contactFormInput = [
+    { name: "Name", label: "from_name" },
+    { name: "Email", label: "reply_to" },
+    { name: "Subject", label: "subject" },
+    { name: "Message", label: "message" },
+  ];
+
+  const getFormikValues = (label: string) => {
+    if (label === "from_name") {
+      return formik.values.from_name;
+    } else if (label === "reply_to") {
+      return formik.values.reply_to;
+    } else if (label === "message") {
+      return formik.values.message;
+    } else if (label === "subject") {
+      return formik.values.subject;
+    }
+    return "";
+  };
+
+  const getFormikErrors = (label: string) => {
+    if (label === "from_name") {
+      return formik.errors.from_name;
+    } else if (label === "reply_to") {
+      return formik.errors.reply_to;
+    } else if (label === "message") {
+      return formik.errors.message;
+    } else if (label === "subject") {
+      return formik.errors.subject;
+    }
+    return "";
+  };
+
+  const contactFormInputs = contactFormInput.map(({ name, label }) => {
+    return (
+      <div key={name} className="contact-form-div">
+        <label htmlFor={label}>{name}</label>
+        <input
+          className="contact-form-input"
+          id={label}
+          name={label}
+          type="text"
+          autoComplete="off"
+          placeholder={`Your ${name}`}
+          onChange={formik.handleChange}
+          value={getFormikValues(label)}
+        />
+        {formik.submitCount > 0 && getFormikErrors(label) && (
+          <div className="expandable show">{getFormikErrors(label)}</div>
+        )}
+      </div>
+    );
+  });
+
   return (
     <form className="formcontact" onSubmit={formik.handleSubmit}>
       <div className="contactform">
-        <div className="form-row-1">
-          <div className="contact-form-div">
-            <label htmlFor="from_name">Name:</label>
-            <input
-              className="contact-form-input"
-              id="from_name"
-              name="from_name"
-              type="text"
-              autoComplete="off"
-              placeholder="YOUR NAME"
-              onChange={formik.handleChange}
-              value={formik.values.from_name}
-            />
-            <div className={`expandable ${formik.errors.from_name ? "show" : ""}`}>
-              {formik.errors.from_name}
-            </div>
-          </div>
-          <div className="contact-form-div">
-            <label htmlFor="subject">Subject</label>
-            <input
-              className="contact-form-input"
-              id="subject"
-              name="subject"
-              type="text"
-              autoComplete="off"
-              placeholder="SUBJECT"
-              onChange={formik.handleChange}
-              value={formik.values.subject}
-            />
-            <div className={`expandable ${formik.errors.subject ? "show" : ""}`}>
-              {formik.errors.subject}
-            </div>
-          </div>
-          <div className="contact-form-div">
-            <label htmlFor="reply_to">Email</label>
-            <input
-              className="contact-form-input"
-              id="reply_to"
-              type="email"
-              name="reply_to"
-              placeholder="YOUR EMAIL"
-              autoComplete="off"
-              onChange={formik.handleChange}
-              value={formik.values.reply_to}
-            />
-            <div className={`expandable ${formik.errors.reply_to ? "show" : ""}`}>
-              {formik.errors.reply_to}
-            </div>
-          </div>
-        </div>
-        <div className="contact-message-div">
-          <label htmlFor="message">Message</label>
-          <textarea
-            className="contact-form-input"
-            id="message"
-            name="message"
-            placeholder="YOUR MESSAGE"
-            autoComplete="off"
-            onChange={formik.handleChange}
-            value={formik.values.message}
-          />
-          <div className={`expandable ${formik.errors.message ? "show" : ""}`}>
-            {formik.errors.message}
-          </div>
-        </div>
+        {contactFormInputs}
         <div className="col-12">
           <button disabled={formik.isSubmitting} type="submit" className="btn main-btn">
             <span>{buttonState}</span>
