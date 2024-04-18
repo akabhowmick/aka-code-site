@@ -16,6 +16,27 @@ export interface Project {
 
 export const projectInfo: Project[] = [
   {
+    name: "Etsy E-commerce Website Template",
+    description: [
+      "Experience unparalleled e-commerce sophistication with our tailored platform, meticulously crafted to showcase your Etsy business.",
+      "Seamlessly integrated with PayPal, it ensures secure payment processing, fostering customer trust.",
+      "Its intuitive design invites visitors to explore your curated offerings effortlessly.",
+      "Customizable features streamline inventory management, order fulfillment, and customer relations, empowering your business to thrive.",
+      "Whether you're a seasoned entrepreneur or embarking on your Etsy journey, our platform stands ready to elevate your online presence and propel your business to new heights of success.",
+    ],
+    techStack: ["HTML", "CSS", "Javascript", "React", "TypeScript", "Supabase", "MUI"],
+    features: [
+      "Our platform offers complete customization options, allowing you to tailor every aspect to your unique needs.",
+      "It boasts a responsive interface, ensuring seamless navigation on both web and mobile devices.",
+      "With a focus on safety and security, our payment interface provides peace of mind for every transaction.",
+      "Experience a modern aesthetic with a sleek look and feel that enhances user engagement and satisfaction.",
+    ],
+    image: laptopQuizImage,
+    link: "https://etsy-e-commerce-template.netlify.app/",
+    githubLink: "https://github.com/akabhowmick/etsy-e-commerce-template",
+    caseStudyLink: "projects/1",
+  },
+  {
     name: "Jet Quiz App",
     description: [
       "This is a quiz application built using React with TypeScript for the frontend and Supabase for the backend. The app is inspired by the popular website JetPunk and allows users to make and take quizzes on various topics.",
@@ -31,7 +52,7 @@ export const projectInfo: Project[] = [
     image: laptopQuizImage,
     link: "https://jetquizapp.netlify.app/",
     githubLink: "https://github.com/akabhowmick/jet-quiz-app",
-    caseStudyLink: "projects/1",
+    caseStudyLink: "projects/2",
   },
   {
     name: "Print3Dverse",
@@ -58,14 +79,14 @@ export const projectInfo: Project[] = [
     image: laptopThreeImage,
     link: "https://print3dverse.com/",
     githubLink: "https://github.com/akabhowmick/3d-site",
-    caseStudyLink: "projects/2",
+    caseStudyLink: "projects/3",
   },
   {
     name: "TaekwonMaru",
     description: [
       "This is a responsive website for a Taekwondo business. It is built using React and Typescript, aiming to be highly accessible and follow the best practices. The website includes information about the business, its classes, instructors, and contact details",
       "Additionally, it features a contact form through which users can directly communicate with the business owners.",
-      "This site can also be easily customized to serve as a template for similar small businesses"
+      "This site can also be easily customized to serve as a template for similar small businesses",
     ],
     techStack: ["HTML", "CSS", "Javascript", "React", "TypeScript", "MUI"],
     features: [
@@ -73,12 +94,12 @@ export const projectInfo: Project[] = [
       "View and learn about the school's staff and masters, and see their credentials",
       "Gain access to web exclusive offers and deals!",
       "Contact the masters directly to learn more about Taekwondo and K-Pop Dance Classes.",
-      "Keep up to date with the school's schedule and current events. "
+      "Keep up to date with the school's schedule and current events. ",
     ],
     image: laptopTkdImage,
     link: "https://marutaekwondo.com/",
     githubLink: "https://github.com/akabhowmick/TaekwonMaru-React",
-    caseStudyLink: "projects/3",
+    caseStudyLink: "projects/4",
   },
   {
     name: "Queens Finest Prints",
@@ -98,6 +119,6 @@ export const projectInfo: Project[] = [
     image: laptopQFPImage,
     link: "https://queensfinestprints.com/",
     githubLink: "https://github.com/akabhowmick/queens-finest-prints",
-    caseStudyLink: "projects/4",
+    caseStudyLink: "projects/5",
   },
 ];
