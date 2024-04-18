@@ -1,7 +1,8 @@
-import laptopThreeImage from "../../assets/laptop3D.png";
-import laptopQuizImage from "../../assets/laptopJetQuiz.png";
-import laptopTkdImage from "../../assets/laptopTkd.png";
-import laptopQFPImage from "../../assets/laptopQFP.png";
+import laptopEtsyImage from "../../assets/ProjectImages/laptopEtsyImage.png";
+import laptopThreeImage from "../../assets/ProjectImages/laptop3D.png";
+import laptopQuizImage from "../../assets/ProjectImages/laptopJetQuiz.png";
+import laptopTkdImage from "../../assets/ProjectImages/laptopTkd.png";
+import laptopQFPImage from "../../assets/ProjectImages/laptopQFP.png";
 
 export interface Project {
   name: string;
@@ -31,7 +32,7 @@ export const projectInfo: Project[] = [
       "With a focus on safety and security, our payment interface provides peace of mind for every transaction.",
       "Experience a modern aesthetic with a sleek look and feel that enhances user engagement and satisfaction.",
     ],
-    image: laptopQuizImage,
+    image: laptopEtsyImage,
     link: "https://etsy-e-commerce-template.netlify.app/",
     githubLink: "https://github.com/akabhowmick/etsy-e-commerce-template",
     caseStudyLink: "projects/1",
