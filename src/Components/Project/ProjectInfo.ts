@@ -1,8 +1,9 @@
 import laptopEtsyImage from "../../assets/ProjectImages/laptopEtsyImage.png";
 import laptopThreeImage from "../../assets/ProjectImages/laptop3D.png";
-import laptopQuizImage from "../../assets/ProjectImages/laptopJetQuiz.png";
+// import laptopQuizImage from "../../assets/ProjectImages/laptopJetQuiz.png";
 import laptopTkdImage from "../../assets/ProjectImages/laptopTkd.png";
 import laptopQFPImage from "../../assets/ProjectImages/laptopQFP.png";
+import laptopTempo from "../../assets/ProjectImages/laptopTempo.jpg";
 
 export interface Project {
   name: string;
@@ -16,6 +17,24 @@ export interface Project {
 }
 
 export const projectInfo: Project[] = [
+  {
+    name: "Tempo ABA Website ",
+    description: [
+      "Welcome to the Tempo ABA website!",
+      "This project is a fully responsive website built using React and TypeScript, styled with Tailwind CSS.",
+      "It integrates icons from the react-icons library and uses images sourced from Freepik.",
+      "The site aims to provide detailed information about ABA therapy services, FAQs, team member bios, and contact details.",
+    ],
+    techStack: ["HTML", "CSS", "Javascript", "React", "TypeScript", "Tailwind"],
+    features: [
+      "It boasts a responsive interface, ensuring seamless navigation on both web and mobile devices.",
+      "Experience a modern aesthetic with a sleek look and feel that enhances user engagement and satisfaction.",
+    ],
+    image: laptopTempo,
+    link: "https://github.com/akabhowmick/tempo-aba",
+    githubLink: "https://tempoaba.com/",
+    caseStudyLink: "projects/2",
+  },
   {
     name: "Etsy E-commerce Website Template",
     description: [
@@ -37,24 +56,7 @@ export const projectInfo: Project[] = [
     githubLink: "https://github.com/akabhowmick/etsy-e-commerce-template",
     caseStudyLink: "projects/1",
   },
-  {
-    name: "Jet Quiz App",
-    description: [
-      "This is a quiz application built using React with TypeScript for the frontend and Supabase for the backend. The app is inspired by the popular website JetPunk and allows users to make and take quizzes on various topics.",
-      "You make, take, and save your favorite quizzes in different categories!",
-    ],
-    techStack: ["HTML", "CSS", "Javascript", "React", "TypeScript", "Supabase"],
-    features: [
-      "Quiz Taking: Users can select from a variety of quizzes on different topics and test their knowledge.",
-      "Score Tracking: The app keeps track of users' scores and displays them at the end of each quiz.",
-      "Leader Board: Users can see how their scores compare to others on the leaderboard.",
-      "Responsive Design: The app is designed to be responsive and work well on both desktop and mobile devices.",
-    ],
-    image: laptopQuizImage,
-    link: "https://jetquizapp.netlify.app/",
-    githubLink: "https://github.com/akabhowmick/jet-quiz-app",
-    caseStudyLink: "projects/2",
-  },
+
   {
     name: "Print3Dverse",
     description: [
