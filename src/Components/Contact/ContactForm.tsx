@@ -1,106 +1,110 @@
-import { useState } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import emailjs from "@emailjs/browser";
+const emailSetUp = {
+  formSubmitEmail: "https://formsubmit.co/akabhowmick@gmail.com",
+  redirectLink: "https://akashbhowmick.com/",
+};
 
 export const ContactForm = () => {
-  const [buttonState, setButtonState] = useState("Send Message");
-  const formik = useFormik({
-    initialValues: {
-      from_name: "", //user name
-      subject: "", // subject of email
-      reply_to: "", // user email
-      message: "", // message of email
-    },
-    validationSchema: Yup.object({
-      from_name: Yup.string().required("* Name field is required"),
-      subject: Yup.string().required("* Subject field is required"),
-      reply_to: Yup.string().email("Invalid email address").required("* Email field is required"),
-      message: Yup.string().required("* Message field is required"),
-    }),
-    onSubmit: (values, { setSubmitting, resetForm }) => {
-      try {
-        emailjs
-          .send("service_iodyf8e", "template_s9bux1j", values, "a8dh5CLKMF5OX1aLy")
-          .then(() => {
-            setButtonState("Send Email");
-            setSubmitting(false);
-            resetForm();
-          });
-      } catch {
-        setButtonState("Send Email");
-        setSubmitting(false);
-      }
-    },
-  });
-
-  const contactFormInput = [
-    { name: "Name", label: "from_name" },
-    { name: "Email", label: "reply_to" },
-    { name: "Subject", label: "subject" },
-    { name: "Message", label: "message" },
-  ];
-
-  const getFormikValues = (label: string) => {
-    if (label === "from_name") {
-      return formik.values.from_name;
-    } else if (label === "reply_to") {
-      return formik.values.reply_to;
-    } else if (label === "message") {
-      return formik.values.message;
-    } else if (label === "subject") {
-      return formik.values.subject;
-    }
-    return "";
-  };
-
-  const getFormikErrors = (label: string) => {
-    if (label === "from_name") {
-      return formik.errors.from_name;
-    } else if (label === "reply_to") {
-      return formik.errors.reply_to;
-    } else if (label === "message") {
-      return formik.errors.message;
-    } else if (label === "subject") {
-      return formik.errors.subject;
-    }
-    return "";
-  };
-
-  const contactFormInputs = contactFormInput.map(({ name, label }) => {
-    return (
-      <div key={name} className="contact-form-div">
-        <label htmlFor={label}>{name}</label>
-        <input
-          className="contact-form-input"
-          id={label}
-          name={label}
-          type="text"
-          autoComplete="off"
-          placeholder={`Your ${name}`}
-          onChange={formik.handleChange}
-          value={getFormikValues(label)}
-        />
-        {formik.submitCount > 0 && getFormikErrors(label) && (
-          <div className="expandable show">{getFormikErrors(label)}</div>
-        )}
-      </div>
-    );
-  });
+  const formContentStyles =
+    "bg-white rounded-xl mx-auto px-6 py-4 max-w-lg";
+  const inputStyles =
+    "block w-full px-4 py-3  text-lg text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 caret-blue-500";
+  const buttonStyles =
+    "inline-flex items-center justify-center w-full px-4 py-3 mt-4 text-lg font-semibold text-white transition-all duration-200 bg-green-700 border border-transparent rounded-md focus:outline-none hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-green-500";
 
   return (
-    <form className="formcontact" onSubmit={formik.handleSubmit}>
-      <div className="contactform">
-        {contactFormInputs}
-        <div className="col-12">
-          <button disabled={formik.isSubmitting} type="submit" className="btn main-btn">
-            <span>{buttonState}</span>
+    <div className={formContentStyles} style={{fontSize: "100%"}}>
+      <form
+        action={emailSetUp.formSubmitEmail}
+        method="POST"
+        className="space-y-6 text-xl"
+        style={{fontSize: "100%"}}
+      >
+        <div className="space-y-4">
+          {/* Name field */}
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-lg font-medium text-gray-700"
+            >
+              Your Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="Name"
+              required
+              placeholder="Enter your full name"
+              className={inputStyles}
+            />
+          </div>
+
+          {/* Email field */}
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-lg font-medium text-gray-700"
+            >
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              required
+              placeholder="Enter your email address"
+              className={inputStyles}
+            />
+          </div>
+
+          {/* Phone field */}
+          <div>
+            <label
+              htmlFor="phone"
+              className="block text-lg font-medium text-gray-700"
+            >
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="Phone"
+              required
+              placeholder="Enter your phone number"
+              className={inputStyles}
+            />
+          </div>
+
+          {/* Message field */}
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-lg font-medium text-gray-700"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="Message"
+              required
+              placeholder="Enter your message"
+              className={`${inputStyles} resize-none`}
+              
+            ></textarea>
+          </div>
+        </div>
+
+        {/* Hidden inputs for additional data */}
+        <input type="hidden" name="_next" value={emailSetUp.redirectLink} />
+        <input type="hidden" name="_subject" value="Contact Form Inquiry!" />
+        <input type="hidden" name="_template" value="table" />
+
+        {/* Submit button */}
+        <div>
+          <button type="submit" className={buttonStyles}>
+            Send
           </button>
         </div>
-        <div className="col-12 form-message">
-          <span id="output" className="output_message text-center text-uppercase" />
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
